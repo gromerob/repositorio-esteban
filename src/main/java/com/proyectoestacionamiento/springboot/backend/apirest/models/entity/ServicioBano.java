@@ -4,25 +4,14 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@DiscriminatorValue(value="flete")
-public class ServicioFlete extends Servicio{
-
-	private boolean ocupado;
+@DiscriminatorValue(value="bano")
+public class ServicioBano extends Servicio {
 	
-	private int precio;
-
-	public int getPrecio() {
-		return precio;
-	}
-
-	public void setPrecio(int precio) {
-		this.precio = precio;
-	}
+	private boolean ocupado;
 
 	public boolean isOcupado() {
 		return ocupado;
@@ -32,16 +21,14 @@ public class ServicioFlete extends Servicio{
 		this.ocupado = ocupado;
 	}
 
-	public ServicioFlete(Long id, @NotNull int precio, boolean ocupado) {
+	public ServicioBano(Long id, boolean ocupado) {
 		super(id);
 		this.ocupado = ocupado;
-		this.precio = precio;
 	}
 
-	public ServicioFlete() {
+	public ServicioBano() {
 		// TODO Auto-generated constructor stub
 	}
-
 	
 	//para cuando llame al metodo no se llame de forma infinita, para que no se llamen entre si infinitamente
 	//value=para el arreglo
@@ -54,6 +41,11 @@ public class ServicioFlete extends Servicio{
     @ManyToOne()
     @JoinColumn(name="id_trabajador", referencedColumnName="id")
     private Trabajador trabajador;
+		
+
+	
+	
+	
 	
 
 }

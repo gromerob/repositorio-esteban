@@ -15,6 +15,16 @@ public class ServicioVulcanizacion extends Servicio{
 
 	private boolean ocupado;
 	
+	private int precio;
+	
+	public int getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(int precio) {
+		this.precio = precio;
+	}
+
 	public boolean isOcupado() {
 		return ocupado;
 	}
@@ -29,11 +39,12 @@ public class ServicioVulcanizacion extends Servicio{
 
 	public ServicioVulcanizacion(Long id, @NotNull int precio, boolean ocupado, Estacionamiento estacionamiento,
 			Trabajador trabajador) {
-		super(id, precio);
+		super(id);
 		this.ocupado = ocupado;
 		this.estacionamiento = estacionamiento;
 		this.trabajador = trabajador;
-	}
+		this.precio = precio;
+	}	
 
 	public ServicioVulcanizacion() {
 		super();

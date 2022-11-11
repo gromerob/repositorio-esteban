@@ -28,8 +28,6 @@ public abstract class Servicio implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotNull
-	private int precio;
 
 
 	public Long getId() {
@@ -40,21 +38,11 @@ public abstract class Servicio implements Serializable {
 		this.id = id;
 	}
 
-	public int getPrecio() {
-		return precio;
-	}
-
-	public void setPrecio(int precio) {
-		this.precio = precio;
-	}
 
 
-
-
-	public Servicio(Long id, @NotNull int precio) {
+	public Servicio(Long id) {
 		super();
 		this.id = id;
-		this.precio = precio;
 	}
 
 	public Servicio() {
