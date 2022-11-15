@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.proyectoestacionamiento.springboot.backend.apirest.models.entity.Vehiculo;
-import com.proyectoestacionamiento.springboot.backend.apirest.service.IvehiculoService;
+import com.proyectoestacionamiento.springboot.backend.apirest.service.IVehiculoService;
 
 @CrossOrigin(origins = {"http://localhost:4200"})
 @RestController
@@ -21,7 +21,7 @@ import com.proyectoestacionamiento.springboot.backend.apirest.service.IvehiculoS
 public class VehiculoResController {
 	
 	@Autowired
-	IvehiculoService vehiculoService;
+	IVehiculoService vehiculoService;
 	
 	@GetMapping("/vehiculos")
 		public ResponseEntity<?> index(){

@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.proyectoestacionamiento.springboot.backend.apirest.models.entity.Cliente;
 
-public interface IclienteService {
+public interface IClienteService {
 
 	public List<Cliente> findAll();
 	

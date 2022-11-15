@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.proyectoestacionamiento.springboot.backend.apirest.models.entity.Trabajador;
 
-public interface ItrabajadorService {
+public interface ITrabajadorService {
 
 	public List<Trabajador> findAll();
 	

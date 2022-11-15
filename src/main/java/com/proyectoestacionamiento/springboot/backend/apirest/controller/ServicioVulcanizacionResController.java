@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.proyectoestacionamiento.springboot.backend.apirest.models.entity.ServicioVulcanizacion;
 import com.proyectoestacionamiento.springboot.backend.apirest.models.entity.Vehiculo;
-import com.proyectoestacionamiento.springboot.backend.apirest.service.IservicioVulcanizacion;
-import com.proyectoestacionamiento.springboot.backend.apirest.service.IvehiculoService;
+import com.proyectoestacionamiento.springboot.backend.apirest.service.IServicioVulcanizacion;
+import com.proyectoestacionamiento.springboot.backend.apirest.service.IVehiculoService;
 
 @CrossOrigin(origins = {"http://localhost:4200"})
 @RestController
@@ -23,7 +23,7 @@ import com.proyectoestacionamiento.springboot.backend.apirest.service.IvehiculoS
 public class ServicioVulcanizacionResController {
 
 	@Autowired
-	IservicioVulcanizacion servicioVulcanizacion;
+	IServicioVulcanizacion servicioVulcanizacion;
 	
 	@GetMapping("/servioVulcanizacion")
 	public ResponseEntity<?> index(){
@@ -38,7 +38,7 @@ public class ServicioVulcanizacionResController {
 		response.put("ok", false);
 		return new ResponseEntity<Map<String,Object>>(response,HttpStatus.NOT_FOUND);
 	}
-	response.put("servicio", listaServicio);
+	response.put("servicioVulcanizacion", listaServicio);
 	return new ResponseEntity<Map<String,Object>>(response,HttpStatus.OK);
 
 }

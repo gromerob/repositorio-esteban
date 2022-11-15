@@ -36,7 +36,7 @@ public class ServicioEscaneoRestController {
 		response.put("ok", false);
 		return new ResponseEntity<Map<String,Object>>(response,HttpStatus.NOT_FOUND);
 	}
-	response.put("servicio", listaServicio);
+	response.put("servicioEscaneo", listaServicio);
 	return new ResponseEntity<Map<String,Object>>(response,HttpStatus.OK);
 
 }

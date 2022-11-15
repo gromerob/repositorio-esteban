@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.proyectoestacionamiento.springboot.backend.apirest.models.entity.Cliente;
-import com.proyectoestacionamiento.springboot.backend.apirest.service.IclienteService;
+import com.proyectoestacionamiento.springboot.backend.apirest.service.IClienteService;
 
 @CrossOrigin(origins = {"http://localhost:4200"})
 @RestController
@@ -21,8 +21,9 @@ import com.proyectoestacionamiento.springboot.backend.apirest.service.IclienteSe
 public class ClienteResController {
 
 	@Autowired
-	IclienteService clienteService;
+	IClienteService clienteService;
 	
+	//url de la consulta
 	@GetMapping("/clientes")
 	public ResponseEntity<?> index(){
 		Map<String,Object> response = new HashMap<>();

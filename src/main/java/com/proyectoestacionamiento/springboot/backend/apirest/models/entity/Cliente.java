@@ -26,25 +26,30 @@ public class Cliente implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
-
+	//Atributo
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	//Atributo el @NotEmpty es para los string
 	@NotEmpty
 	@Column(nullable = false, unique = true)
 	private String nombre;
 	
+	//Atributo @NotNull es para los numeros
 	@NotNull
 	private int numero;
 	
+	//Atributo
 	@NotEmpty
 	private String direccion;
 	
+	//Atributo
 	@NotEmpty
 	private String rut;
 	
-	//para cuando llame al metodo no se llame de forma infinita, para que no se llamen entre si infinitamente
+	
+	//Funcion para vincular clientes con vehiculos, ademas impide que se llamen entre si infiinitamente
 	@JsonIgnoreProperties(value ={"cliente","hibernateLazyInitializer","handler"}, allowSetters = true)
     @OneToMany(mappedBy = "cliente")
     private Set<Vehiculo> vehiculos = new HashSet<Vehiculo>();

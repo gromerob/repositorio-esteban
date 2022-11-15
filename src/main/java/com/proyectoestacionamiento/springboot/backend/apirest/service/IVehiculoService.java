@@ -6,7 +6,7 @@ import com.proyectoestacionamiento.springboot.backend.apirest.models.entity.Vehi
 
 
 
-public interface IvehiculoService {
+public interface IVehiculoService {
 
 	public List<Vehiculo> findAll();
 	

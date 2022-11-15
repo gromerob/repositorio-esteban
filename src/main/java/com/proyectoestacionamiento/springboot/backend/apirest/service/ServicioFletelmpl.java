@@ -9,7 +9,7 @@ import com.proyectoestacionamiento.springboot.backend.apirest.models.entity.Serv
 import com.proyectoestacionamiento.springboot.backend.apirest.repository.IservicioFleteRepository;
 
 @Service
-public class ServicioFletelmpl implements IservicioFlete{
+public class ServicioFletelmpl implements IServicioFlete{
 
 	@Autowired
 	IservicioFleteRepository servicioFleteRepository;
