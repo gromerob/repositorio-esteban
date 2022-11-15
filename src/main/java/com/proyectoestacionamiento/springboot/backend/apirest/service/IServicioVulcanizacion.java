@@ -6,7 +6,7 @@ import com.proyectoestacionamiento.springboot.backend.apirest.models.entity.Serv
 
 
 
-public interface IservicioVulcanizacion {
+public interface IServicioVulcanizacion {
 
 	public List<ServicioVulcanizacion> findAll();
 	

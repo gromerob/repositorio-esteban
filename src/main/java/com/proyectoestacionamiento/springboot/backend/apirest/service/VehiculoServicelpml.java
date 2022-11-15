@@ -9,7 +9,7 @@ import com.proyectoestacionamiento.springboot.backend.apirest.models.entity.Vehi
 import com.proyectoestacionamiento.springboot.backend.apirest.repository.IvehiculoRepository;
 
 @Service
-public class VehiculoServicelpml implements IvehiculoService{
+public class VehiculoServicelpml implements IVehiculoService{
 
 	@Autowired
 	IvehiculoRepository VehiculoRepository;

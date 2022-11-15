@@ -9,7 +9,7 @@ import com.proyectoestacionamiento.springboot.backend.apirest.models.entity.Clie
 import com.proyectoestacionamiento.springboot.backend.apirest.repository.IclienteRepository;
 
 @Service
-public class ClienteServiceImpl implements IclienteService {
+public class ClienteServiceImpl implements IClienteService {
 
 	@Autowired
 	IclienteRepository clienteRepository;

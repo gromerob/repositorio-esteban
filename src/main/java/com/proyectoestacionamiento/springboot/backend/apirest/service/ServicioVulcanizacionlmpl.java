@@ -11,7 +11,7 @@ import com.proyectoestacionamiento.springboot.backend.apirest.repository.Iservic
 
 
 @Service
-public class ServicioVulcanizacionlmpl implements IservicioVulcanizacion{
+public class ServicioVulcanizacionlmpl implements IServicioVulcanizacion{
 
 	
 	@Autowired

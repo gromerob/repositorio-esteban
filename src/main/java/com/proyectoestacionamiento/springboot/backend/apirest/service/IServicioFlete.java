@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.proyectoestacionamiento.springboot.backend.apirest.models.entity.ServicioFlete;
 
-public interface IservicioFlete {
+public interface IServicioFlete {
 
 	public List<ServicioFlete> findAll();
 	

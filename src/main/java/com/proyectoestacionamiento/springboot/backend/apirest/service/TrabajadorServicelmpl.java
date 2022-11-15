@@ -10,7 +10,7 @@ import com.proyectoestacionamiento.springboot.backend.apirest.models.entity.Trab
 import com.proyectoestacionamiento.springboot.backend.apirest.repository.ItrabajadorRepository;
 
 @Service
-public class TrabajadorServicelmpl implements ItrabajadorService{
+public class TrabajadorServicelmpl implements ITrabajadorService{
 
 	
 	@Autowired

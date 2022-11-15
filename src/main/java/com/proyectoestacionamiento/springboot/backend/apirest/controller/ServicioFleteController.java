@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.proyectoestacionamiento.springboot.backend.apirest.models.entity.ServicioFlete;
-import com.proyectoestacionamiento.springboot.backend.apirest.service.IservicioFlete;
+import com.proyectoestacionamiento.springboot.backend.apirest.service.IServicioFlete;
 
 @CrossOrigin(origins = {"http://localhost:4200"})
 @RestController
@@ -21,9 +21,9 @@ import com.proyectoestacionamiento.springboot.backend.apirest.service.IservicioF
 public class ServicioFleteController {
 
 	@Autowired
-	IservicioFlete servicioFlete;
+	IServicioFlete servicioFlete;
 	
-	@GetMapping("/servioFlete")
+	@GetMapping("/servicioFlete")
 	public ResponseEntity<?> index(){
 	Map<String,Object> response = new HashMap<>();
 	List<ServicioFlete> listaServicio = null;
@@ -36,7 +36,7 @@ public class ServicioFleteController {
 		response.put("ok", false);
 		return new ResponseEntity<Map<String,Object>>(response,HttpStatus.NOT_FOUND);
 	}
-	response.put("servicio", listaServicio);
+	response.put("servicioFlete", listaServicio);
 	return new ResponseEntity<Map<String,Object>>(response,HttpStatus.OK);
 
 }

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.proyectoestacionamiento.springboot.backend.apirest.models.entity.Cliente;
 import com.proyectoestacionamiento.springboot.backend.apirest.models.entity.Trabajador;
-import com.proyectoestacionamiento.springboot.backend.apirest.service.ItrabajadorService;
+import com.proyectoestacionamiento.springboot.backend.apirest.service.ITrabajadorService;
 
 @CrossOrigin(origins = {"http://localhost:4200"})
 @RestController
@@ -22,9 +22,9 @@ import com.proyectoestacionamiento.springboot.backend.apirest.service.Itrabajado
 public class TrabajadorResController {
 	
 	@Autowired
-	ItrabajadorService trabajaroService;
+	ITrabajadorService trabajaroService;
 	
-	@GetMapping("/trabajador")
+	@GetMapping("/trabajadores")
 	public ResponseEntity<?> index(){
 		Map<String,Object> response = new HashMap<>();
 		List<Trabajador> trabajador= null;
@@ -38,7 +38,7 @@ public class TrabajadorResController {
 			return new ResponseEntity<Map<String,Object>>(response,HttpStatus.NOT_FOUND);
 		}
 		
-		response.put("trabajador", trabajador);
+		response.put("trabajadores", trabajador);
 		return new ResponseEntity<Map<String,Object>>(response,HttpStatus.OK);
 	}
 	
